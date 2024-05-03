@@ -1,0 +1,5 @@
+default:
+	npx playwright test --ui
+
+headless:
+	npx playwright test

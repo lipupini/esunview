@@ -8,25 +8,18 @@ default:
 inbox account:
 	ls -l --color=auto --format=single-column collection/{{account}}/.lipupini/inbox
 
-# Start PHP's built-in webserver
-serve port='4000':
-	cd module/Esunview/webroot && PHP_CLI_SERVER_WORKERS=2 php -S localhost:{{port}} index.php
+# Proxy to system `justfile`
+system *args="":
+	cd system && just {{args}}
 
-# Build a Lipupini Docker image from `system/docker`
-docker-build type='frankenphp':
-	docker-compose --file system/deploy/docker/{{type}}/docker-compose.yml build
-	# docker build --tag lipupini/lipupini-{{type}}:latest --file system/deploy/docker/{{type}}/Dockerfile .
+# Proxy to test `justfile`
+test *args="":
+	cd test && just {{args}}
 
-# Run Docker container from a Lipupini Docker image
-docker-up type='frankenphp':
-	docker-compose --file system/deploy/docker/{{type}}/docker-compose.yml up
-	# docker run -it --rm --name lipupini/lipupini-{{type}}:latest lipupini-{{type}}
+# Proxy to deploy `justfile`
+deploy *args="":
+	cd system/deploy && just {{args}}
 
-test *args:
-	cd test && npx playwright test {{args}}
-
-# Grab and integrate the latest version from remote `origin` https://github.com/lipupini/esunview.git
-upgrade-deployment:
-	#git reset --hard origin/master
-	git fetch origin master
-	git checkout origin/master
+# Proxy to docker `justfile`
+docker *args="":
+	cd system/deploy/docker && just {{args}}

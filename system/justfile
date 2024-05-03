@@ -1,0 +1,3 @@
+# Start PHP's built-in webserver
+dev port='4000':
+	cd ../module/Esunview/webroot && PHP_CLI_SERVER_WORKERS=2 php -S localhost:{{port}} index.php

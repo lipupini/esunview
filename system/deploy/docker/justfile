@@ -1,0 +1,9 @@
+# Build a Lipupini Docker image from `system/docker`
+build type='frankenphp':
+	docker-compose --file ./{{type}}/docker-compose.yml build
+	# docker build --tag lipupini/lipupini-{{type}}:latest --file .{{type}}/Dockerfile .
+
+# Run Docker container from a Lipupini Docker image
+up type='frankenphp':
+	docker-compose --file ./{{type}}/docker-compose.yml up
+	# docker run -it --rm --name lipupini/lipupini-{{type}}:latest lipupini-{{type}}

@@ -1,0 +1,10 @@
+set dotenv-filename := "../config/.env"
+
+default:
+	#git push origin master
+	ssh $SSH_USER@$SSH_HOST git fetch origin master && git checkout origin/master
+
+# Grab and integrate the latest version from remote `origin` https://github.com/lipupini/esunview.git
+upgrade:
+	#git reset --hard origin/master
+	git fetch origin master && git checkout origin/master
