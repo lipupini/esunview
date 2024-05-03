@@ -1,7 +1,9 @@
-default:
+# This list of system commands
+help:
 	just --list
 
-# Proxy to deploy `justfile`
+# Proxy to `system/deploy/justfile`
+# Deployment commands
 deploy *args="":
 	cd deploy && just {{args}}
 

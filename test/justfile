@@ -1,8 +1,11 @@
-default:
+# Use Playwright GUI
+ui:
 	npx playwright test --ui
 
+# Headless test
 headless *args="":
 	npx playwright test {{args}}
 
+# Pre-deployment test
 for-deploy:
 	just headless --project=webkit
