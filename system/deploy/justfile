@@ -4,6 +4,18 @@ set dotenv-filename := "../config/.env"
 default:
 	just push && just upgrade
 
+# Run a command from the `bin` directory on deployment server
+bin command *args="":
+	ssh $SSH_USER@$SSH_HOST "cd ${DEPLOY_DIRECTORY} && bin/{{command}}.php {{args}}"
+
+# Generate media cache files on deployment server
+process-media:
+	just bin process-media
+
+# Generate RSA keys on deployment server
+generate-keys collection="":
+	just bin generate-keys {{collection}}
+
 # Push committed changes to remote `origin` https://github.com/lipupini/esunview.git
 push:
 	GIT_SSH_COMMAND="ssh -i ${GIT_SSH_KEY}" git push origin HEAD
