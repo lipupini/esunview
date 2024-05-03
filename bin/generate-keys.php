@@ -5,12 +5,24 @@ use Module\Lipupini\Collection;
 use Module\Lipupini\State;
 use Module\Lipupini\Encryption;
 
+$readlineSupport = false;
+
 /** @var State $systemState */
 $systemState = require(__DIR__ . '/../system/config/state.php');
 
 if (empty($argv[1])) {
-	echo 'Must specify collection name' . "\n";
-	exit(1);
+	if ($readlineSupport) {
+		readline('No collection folder specified. Do you want to process all collections? [Y/n] ');
+	} else {
+		$confirm = 'Y';
+	}
+	if (strtoupper($confirm) !== 'Y') {
+		exit(0);
+	}
+	foreach ((new Collection\Utility($systemState))->allCollectionFolders() as $collectionFolder) {
+		passthru(__FILE__ . ' ' . $collectionFolder);
+	}
+	exit(0);
 }
 
 $collectionName = $argv[1];
@@ -25,11 +37,24 @@ if (!is_dir($lipupiniPath)) {
 	mkdir($lipupiniPath, 0755, true);
 }
 
-echo 'About to generate new RSA keys in `collection/' . $collectionName . '/.lipupini/`...' . "\n\n";
+echo 'About to generate new RSA keys in `collection/' . $collectionName . '/.lipupini/`...' . "\n";
 
-$confirm = readline('Proceed? [Y/n] ');
+if ($readlineSupport) {
+	$confirm = readline('Proceed? [Y/n] ');
+} else {
+	$confirm = 'Y';
+}
+
 if (strtoupper($confirm) !== 'Y') {
 	exit(0);
+}
+
+if (
+	file_exists($lipupiniPath . '/rsakey.private') ||
+	file_exists($lipupiniPath . '/rsakey.private')
+) {
+	echo 'Already exists, doing nothing. Manually delete to regenerate.' . "\n";
+	exit(1);
 }
 
 (new Encryption\Key)->generateAndSave(
@@ -38,6 +63,6 @@ if (strtoupper($confirm) !== 'Y') {
 	privateKeyBits: 2048,
 );
 
-echo "\n" . 'Done.' . "\n";
+echo 'Done.' . "\n";
 
 exit(0);
