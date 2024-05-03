@@ -2,6 +2,7 @@ set dotenv-filename := "../config/.env"
 
 # Run the deployment!
 default:
+	cd ../.. && just test for-deploy
 	just push && just upgrade
 
 # Run a command from the `bin` directory on deployment server

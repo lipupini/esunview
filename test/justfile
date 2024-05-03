@@ -1,5 +1,8 @@
 default:
 	npx playwright test --ui
 
-headless:
-	npx playwright test
+headless *args="":
+	npx playwright test {{args}}
+
+for-deploy:
+	just headless --project=webkit
