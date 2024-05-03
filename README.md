@@ -7,7 +7,7 @@ Donation Link: **https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4**
 ```
 Telegram:  https://t.me/dupbz (E2E Available)
 Voicemail: 804-326-4562
-Email:     apps@dup.bz
+Email:     app@dup.bz
 
 Use all three if you can.
 ```
