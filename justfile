@@ -12,11 +12,6 @@ inbox account:
 serve port='4000':
 	cd module/Esunview/webroot && PHP_CLI_SERVER_WORKERS=2 php -S localhost:{{port}} index.php
 
-# Proxy to `system/justfile`
-# System commands
-system *args="":
-	cd system && just {{args}}
-
 # Proxy to `test/justfile`
 # E2E testing commands
 test *args="":

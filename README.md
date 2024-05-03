@@ -12,7 +12,7 @@ Email:     app@dup.bz
 Use all three if you can.
 ```
 
-Contact with inquiries, tips, or to get cursed out if you are spamming me.
+Is any part of this repository useful? Contact me with inquiries, tips, or to get cursed out if you are spamming me.
 
 The only installation that I am working on right now is at https://c.dup.bz
 
