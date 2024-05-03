@@ -45,7 +45,7 @@ const testCollectionCustomAssets: string[] = [
 ]
 
 const askPhp = (to: string): any => {
-	const command = 'php "' + __dirname + '/../../bin/test/bridge-e2e.php" ' + to
+	const command = 'php "' + __dirname + '/../../bin/test/genie.php" ' + to
 	const answer = execSync(command, {stdio: 'pipe'}).toString()
 	try {
 		return JSON.parse(answer)
