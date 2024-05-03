@@ -7,7 +7,7 @@ import path = require('path')
 import fs = require('fs')
 const testAssetsFolder = __dirname + '/../assets'
 const collectionRootFolder = __dirname + '/../../collection'
-const webRootFolder = __dirname + '/../../module/Lukinview/webroot'
+const webRootFolder = __dirname + '/../../module/Esunview/webroot'
 import {execSync} from 'child_process'
 
 // In Chromiom version 119.0.6045.9 bundled with Playwright,
@@ -178,10 +178,12 @@ test.describe.serial('test collection', () => {
 			let mediaType = (await page.locator('#media-item').getAttribute('class')).replace(/-item/, '')
 			switch (mediaType) {
 				case 'image':
-					const largeImg = await page.locator('main a').getAttribute('href')
 					const mediumImg= await page.locator('main img').getAttribute('src')
+					const largeImg= mediumImg.replace('/medium/', '/large/')
+					const watermarkImg= mediumImg.replace('/medium/', '/watermark/')
 					await page.goto(largeImg)
 					await page.goto(mediumImg)
+					await page.goto(watermarkImg)
 					break
 				case 'audio':
 					const audioSrc = await page.locator('main source').getAttribute('src')

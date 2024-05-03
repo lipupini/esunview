@@ -102,7 +102,11 @@ function analyzeCache(State $systemState, Collection\Utility $collectionUtility,
 
 			case 'image':
 				foreach (array_keys($systemState->mediaSize) as $mediaSize) {
-					if (count($fileInfo) !== count($cacheFolderHashTable[$mediaType][$mediaSize] ?? [])) {
+					if (
+						// @TODO: Watermarks need to be tested
+						'watermark' !== $mediaSize &&
+						count($fileInfo) !== count($cacheFolderHashTable[$mediaType][$mediaSize] ?? [])
+					) {
 						$errors[] = 'Image ' . $mediaSize . ' cache mismatch';
 						$errors[] = '$fileInfo = ' . var_export($fileInfo, true);
 						$errors[] = '$cacheFolderHashTable[$mediaType][$mediaSize] = ' . var_export($cacheFolderHashTable[$mediaType][$mediaSize] ?? [], true);
