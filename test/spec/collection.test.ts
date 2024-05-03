@@ -145,17 +145,18 @@ test.describe.serial('test collection', () => {
 
 	if (createNewCollection) {
 		test('add custom assets', async ({page}) => {
-			fs.cpSync(testAssetsFolder + '/image', testCollectionFolder.root + '/.lipupini/image', {recursive: true})
+			//fs.cpSync(testAssetsFolder + '/.lipupini/watermark.png', testCollectionFolder.root + '/.lipupini/watermark.png', {recursive: true})
+			fs.cpSync(testAssetsFolder + '/.lipupini/image', testCollectionFolder.root + '/.lipupini/image', {recursive: true})
 			if (hasFfmpeg) {
 				// If we have `ffmpeg` then we only need to copy custom assets that aren't generated
 				fs.mkdirSync(testCollectionFolder.root + '/.lipupini/audio')
-				fs.cpSync(testAssetsFolder + '/audio/thumbnail', testCollectionFolder.root + '/.lipupini/audio/thumbnail', {recursive: true})
+				fs.cpSync(testAssetsFolder + '/.lipupini/audio/thumbnail', testCollectionFolder.root + '/.lipupini/audio/thumbnail', {recursive: true})
 			} else {
 				testCollectionCustomAssets.forEach(assetPath => {
-					fs.cpSync(testAssetsFolder + '/' + assetPath, testCollectionFolder.root + '/.lipupini/' + assetPath)
+					fs.cpSync(testAssetsFolder + '/.lipupini/' + assetPath, testCollectionFolder.root + '/.lipupini/' + assetPath)
 				})
 				if (testCollectionFiles.indexOf('test.flac') > -1) {
-					fs.cpSync(testAssetsFolder + '/audio/waveform/test.flac.png', testCollectionFolder.root + '/.lipupini/audio/waveform/test.flac.png')
+					fs.cpSync(testAssetsFolder + '/.lipupini/audio/waveform/test.flac.png', testCollectionFolder.root + '/.lipupini/audio/waveform/test.flac.png')
 				}
 			}
 			await page.waitForTimeout(500) // A little delay to help ensure that the new files are available
@@ -179,11 +180,15 @@ test.describe.serial('test collection', () => {
 			switch (mediaType) {
 				case 'image':
 					const mediumImg= await page.locator('main img').getAttribute('src')
-					const largeImg= mediumImg.replace('/medium/', '/large/')
-					const watermarkImg= mediumImg.replace('/medium/', '/watermark/')
-					await page.goto(largeImg)
-					await page.goto(mediumImg)
-					await page.goto(watermarkImg)
+					const imageSizePreset: string[] = [
+						mediumImg,
+						//mediumImg.replace('/medium/', '/watermark/'),
+						mediumImg.replace('/medium/', '/large/'),
+					]
+					for (const img of imageSizePreset) {
+						const response = await page.goto(img)
+						expect(response.status()).toEqual(200)
+					}
 					break
 				case 'audio':
 					const audioSrc = await page.locator('main source').getAttribute('src')
