@@ -2,6 +2,14 @@ Esunview source code is non-free.
 
 Donation Link: https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4
 
+```
+Telegram:  http://t.me/dupbz
+Voicemail: 804-326-4562
+Email:     apps@dup.bz
+```
+
+Contact with inquiries, tips, or to get cursed out if you are spamming me.
+
 ---
 
 Licenses of some dependencies:
