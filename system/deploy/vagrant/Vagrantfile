@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Guest VM IP address -- Change this if you will have multiple boxes running at once
+server_ip = "192.168.33.94"
+
+Vagrant.configure("2") do |config|
+	# Every Vagrant development environment requires a box. You can search for
+	# boxes at https://vagrantcloud.com/search.
+	config.vm.box = "debian/bookworm64"
+	config.vm.hostname = "lipupini.local"
+	config.vm.network :forwarded_port, guest: 80, host: 80
+	config.vm.network :forwarded_port, guest: 443, host: 443
+	config.vm.synced_folder "../../..", "/app"
+end
