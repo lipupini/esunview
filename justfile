@@ -29,6 +29,8 @@ docker-up type='frankenphp':
 test *args:
 	cd test && npx playwright test {{args}}
 
-# Grab and integrate the latest demo version
-upgrade-latest-demo:
-	git stash && git fetch origin demo && git rebase origin/demo && git stash pop
+# Grab and integrate the latest version from remote `origin` https://github.com/lipupini/esunview.git
+upgrade-deployment:
+	#git reset --hard origin/master
+	git fetch origin master
+	git checkout origin/master
