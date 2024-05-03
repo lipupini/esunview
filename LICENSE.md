@@ -2,7 +2,9 @@ Esunview source code is non-free.
 
 Is any part of this repository useful in any way?
 
-https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4
+https://paypal.me/dupbz (PayPal + PayPal Crypto)
+
+https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4 (Credit Card + Amazon Pay + Cash App + WeChat + Affirm)
 
 Contact with inquiries, tips, or to get cursed out if you are spamming me.
 
