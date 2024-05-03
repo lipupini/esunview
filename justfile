@@ -8,6 +8,10 @@ help:
 inbox account:
 	ls -l --color=auto --format=single-column collection/{{account}}/.lipupini/inbox
 
+# Start PHP's built-in webserver
+serve port='4000':
+	cd module/Esunview/webroot && PHP_CLI_SERVER_WORKERS=2 php -S localhost:{{port}} index.php
+
 # Proxy to `system/justfile`
 # System commands
 system *args="":
