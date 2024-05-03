@@ -2,12 +2,16 @@ set dotenv-filename := "../config/.env"
 
 # Confirm before running deployment
 [confirm('Run the deployment?')]
-help:
+confirm:
 	just now
+
+# This list of deployment commands
+help:
+	just --list
 
 # Run a command from the `bin` directory on deployment server
 bin command *args="":
-	ssh $SSH_USER@$SSH_HOST "cd ${DEPLOY_DIRECTORY} && bin/{{command}}.php {{args}}"
+	ssh ${SSH_USER}@${SSH_HOST} "cd ${DEPLOY_DIRECTORY} && bin/{{command}}.php {{args}}"
 
 # Generate media cache files on deployment server
 process-media:

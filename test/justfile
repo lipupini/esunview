@@ -1,6 +1,11 @@
 # Use Playwright GUI
+[confirm('Open Playwright in browser?')]
 ui:
 	npx playwright test --ui
+
+# This list of test commands
+help:
+	just --list
 
 # Headless test
 headless *args="":
