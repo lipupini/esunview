@@ -150,7 +150,7 @@ class Gateway {
 				'images' => $image,
 				'url' => $itemUrl,
 			],
-			['idempotency_key' => 'ik-product-' . sha1($productName . $description . $itemUrl . $this->system->stripeKey)]
+			['idempotency_key' => 'ik-product-' . sha1($productName . $description . $itemUrl . $this->system->stripeKey . '2')]
 		);
 
 		$price = $this->stripe->prices->create([
