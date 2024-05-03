@@ -8,13 +8,15 @@ Licenses of some dependencies:
 
 - vanjs-org/van: MIT @ https://github.com/vanjs-org/van/blob/main/LICENSE
 
+- microsoft/playwright: Apache 2.0 @ https://github.com/microsoft/playwright/blob/main/LICENSE
+
 - erusev/parsedown: MIT @ https://github.com/erusev/parsedown/blob/master/LICENSE.txt
 
-- php-imagine/Imagine: https://github.com/php-imagine/Imagine/blob/develop/LICENSE
+- php-imagine/Imagine: Copyright Bulat Shakirzyanov @ https://github.com/php-imagine/Imagine/blob/develop/LICENSE
 
 - Arrow icons: GPL @ https://www.svgrepo.com/author/Pictogrammers
 
-- videojs/video.js: Apache License Version 2.0 @ https://github.com/videojs/video.js/blob/main/LICENSE
+- videojs/video.js: Apache 2.0 @ https://github.com/videojs/video.js/blob/main/LICENSE
 
 - stripe/stripe-php: MIT @ https://github.com/vanjs-org/van/blob/main/LICENSE
 
