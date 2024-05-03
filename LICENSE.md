@@ -1,6 +1,10 @@
 Esunview source code is non-free.
 
-Donation Link: https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4
+Is any part of this repository useful in any way?
+
+https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4
+
+Contact with inquiries, tips, or to get cursed out if you are spamming me.
 
 ```
 Telegram:  https://t.me/dupbz (E2E Available)
@@ -9,8 +13,6 @@ Email:     app@dup.bz
 
 Use all three if you can.
 ```
-
-Contact with inquiries, tips, or to get cursed out if you are spamming me.
 
 ---
 

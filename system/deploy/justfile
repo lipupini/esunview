@@ -26,11 +26,7 @@ generate-keys collection="":
 push:
 	GIT_SSH_COMMAND="ssh -i ${GIT_SSH_KEY}" git push origin HEAD
 
-# Apply to deployment remote `origin` https://github.com/lipupini/esunview.git
-[confirm]
-upgrade:
-	ssh $SSH_USER@$SSH_HOST "cd ${DEPLOY_DIRECTORY} && git reset --hard origin/master && git fetch origin master && git checkout origin/master"
-
-# Run the deployment!
+# Run the deployment from remote `origin` https://github.com/lipupini/esunview.git !
 now:
-	just push && just upgrade
+	just push
+	ssh $SSH_USER@$SSH_HOST "cd ${DEPLOY_DIRECTORY} && git reset --hard origin/master && git fetch origin master && git checkout origin/master"
