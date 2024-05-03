@@ -3,9 +3,11 @@ Esunview source code is non-free.
 Donation Link: https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4
 
 ```
-Telegram:  http://t.me/dupbz
+Telegram:  https://t.me/dupbz (E2E Available)
 Voicemail: 804-326-4562
 Email:     apps@dup.bz
+
+Use all three if you can.
 ```
 
 Contact with inquiries, tips, or to get cursed out if you are spamming me.
