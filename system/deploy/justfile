@@ -1,13 +1,14 @@
 set dotenv-filename := "../config/.env"
 
+# Run the deployment!
 default:
-	just push
-	ssh $SSH_USER@$SSH_HOST "cd ${DEPLOY_DIRECTORY} && git fetch origin master && git checkout origin/master"
+	just push && just upgrade
 
-# Grab and integrate the latest version from remote `origin` https://github.com/lipupini/esunview.git
-upgrade:
-	#git reset --hard origin/master
-	git fetch origin master && git checkout origin/master
-
+# Push committed changes to remote `origin` https://github.com/lipupini/esunview.git
 push:
 	GIT_SSH_COMMAND="ssh -i ${GIT_SSH_KEY}" git push origin HEAD
+
+# Apply remote `origin` https://github.com/lipupini/esunview.git to deployment
+[confirm]
+upgrade:
+	ssh $SSH_USER@$SSH_HOST "cd ${DEPLOY_DIRECTORY} && git reset --hard origin/master && git fetch origin master && git checkout origin/master"
