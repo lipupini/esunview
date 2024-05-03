@@ -4,6 +4,8 @@ Esunview is a **non-free** [Lipupini](https://github.com/lipupini/lipupini) modu
 
 Is any part of this repository useful in any way?
 
+Contact me with inquiries, tips, or to report the weather in your area.
+
 PayPal: **https://paypal.me/dupbz**
 
 Stripe: **https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4** (CC + Amazon Pay + Cash App + WeChat + Affirm)
@@ -11,8 +13,6 @@ Stripe: **https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4** (CC + Amazon Pay + Cash Ap
 BTC: **1NRPbFJggFsG3dFoFVfPTCcibqMtdfGzn3**
 
 ETH: **0xde0cf195ed34197ee287f5ca611e8c5f0cdb1d26**
-
-Contact me with inquiries, tips, or to get cursed out if you are spamming me.
 
 ```
 Telegram:  https://t.me/dupbz (E2E Available)
