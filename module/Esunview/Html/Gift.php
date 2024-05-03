@@ -6,7 +6,7 @@ require(__DIR__ . '/Core/Open.php') ?>
 	<div>
 		<?php if ($this->word === 'g') : ?>
 
-		<p>Try to click on your favorite word:</p>
+		<p>Try to click on your favourite word:</p>
 		<?php endif ?>
 
 		<form class="purchase" action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="get">
