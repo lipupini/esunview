@@ -8,3 +8,6 @@ default:
 upgrade:
 	#git reset --hard origin/master
 	git fetch origin master && git checkout origin/master
+
+push:
+	GIT_SSH_COMMAND="ssh -i ${GIT_SSH_KEY}" git push origin HEAD
