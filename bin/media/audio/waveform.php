@@ -4,8 +4,10 @@
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+cli_set_process_title('Audio Waveform');
+
 if (empty($argv[1]) || empty($argv[2])) {
-	echo 'Expected usage: `./ffmpeg-audio-waveform.php <inputVideoFilepath> <outputPngFilepath>`' . "\n";
+	echo 'Expected usage: `waveform.php <inputVideoFilepath> <outputPngFilepath>`' . "\n";
 	exit(1);
 }
 
@@ -33,8 +35,8 @@ function saveAudioWaveform($inputFile, $outputPngPath, $color) {
 	5) Delete the symlink from (2) and move the output file to its intended destination
 	*/
 	$fileSha1 = sha1_file($inputFile);
-	$tmpInputFilepath = sys_get_temp_dir() . '/' . $fileSha1 . '_input.' . pathinfo($inputFile, PATHINFO_EXTENSION);
-	$tmpOutputFilepath = sys_get_temp_dir() . '/' . $fileSha1 . '_output.png';
+	$tmpInputFilepath = sys_get_temp_dir() . '/ffmpeg-audio-waveform-' . $fileSha1 . '_input.' . pathinfo($inputFile, PATHINFO_EXTENSION);
+	$tmpOutputFilepath = sys_get_temp_dir() . '/ffmpeg-audio-waveform-' . $fileSha1 . '_output.png';
 	symlink($inputFile, $tmpInputFilepath);
 	$command ='ffmpeg -i ' . escapeshellarg($tmpInputFilepath) . ' -lavfi showwavespic=split_channels=0:draw=full:s=' . $dimensions . ':colors=' . $color . ' ' . escapeshellarg($tmpOutputFilepath);
 	passthru(escapeshellcmd($command));

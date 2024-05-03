@@ -70,7 +70,7 @@ class VideoThumbnail {
 			mkdir(pathinfo($thumbnailPathFull, PATHINFO_DIRNAME), 0755, true);
 		}
 
-		$command = $systemState->dirRoot . '/bin/ffmpeg-video-thumbnail.php '
+		$command = $systemState->dirRoot . '/bin/media/video/thumbnail.php '
 			. escapeshellarg($systemState->dirCollection . '/' . $collectionName . '/' . $videoPath)
 			. ' ' . escapeshellarg($thumbnailPathFull);
 		// `ffmpeg` output is purged from display with `> /dev/null 2>&1`. Remove it to see `ffmpeg` output in webserver logs

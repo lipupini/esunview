@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+cli_set_process_title('Generate RSA Keys');
+
 use Module\Lipupini\Collection;
 use Module\Lipupini\State;
 use Module\Lipupini\Encryption;
@@ -8,7 +10,7 @@ use Module\Lipupini\Encryption;
 $readlineSupport = false;
 
 /** @var State $systemState */
-$systemState = require(__DIR__ . '/../system/config/state.php');
+$systemState = require(__DIR__ . '/../../system/config/state.php');
 
 if (empty($argv[1])) {
 	if ($readlineSupport) {

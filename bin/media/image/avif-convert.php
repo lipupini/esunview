@@ -4,6 +4,8 @@
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+cli_set_process_title('AVIF Convert');
+
 use Module\Lipupini\Collection;
 use Module\Lipupini\State;
 
@@ -11,7 +13,7 @@ use Module\Lipupini\State;
 $sleepFor = 10;
 
 /** @var State $systemState */
-$systemState = require(__DIR__ . '/../system/config/state.php');
+$systemState = require(__DIR__ . '/../../../system/config/state.php');
 
 echo 'WARNING: This script will overwrite original collection JPEG files and convert them to AVIF starting in ' . $sleepFor . ' seconds.' . "\n\n";
 echo 'Press CTRL+C now if that is not what you want to do.' . "\n";
@@ -36,7 +38,6 @@ foreach ($collectionData as $filepath => $metadata) {
 	}
 
 	// The file is a JPEG
-
 	$jpegPath = $collectionPath . '/' . $filepath;
 	$avifPath = $collectionPath . '/' . preg_replace('#\.jpe?g$#', '.avif', $filepath);
 
@@ -61,5 +62,5 @@ echo 'Press CTRL+C now if that is not what you want to do.' . "\n";
 
 sleep($sleepFor);
 
-$command = $systemState->dirRoot . '/bin/process-media.php ' . escapeshellarg($collectionName);
+$command = $systemState->dirRoot . '/bin/media/process.php ' . escapeshellarg($collectionName);
 passthru($command);

@@ -4,6 +4,8 @@
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+cli_set_process_title('Process Media Cache');
+
 use Module\Lipupini\Collection;
 use Module\Lipupini\Collection\MediaProcessor;
 use Module\Esunview\Collection\MediaProcessor\Image as MediaProcessorImage;
@@ -12,7 +14,7 @@ use Module\Lipupini\State;
 // See `readline` note in root README.md as this script might benefit from prompts
 
 /** @var State $systemState */
-$systemState = require(__DIR__ . '/../system/config/state.php');
+$systemState = require(__DIR__ . '/../../system/config/state.php');
 
 if (empty($argv[1])) {
 	$confirm = 'Y'; // readline('No collection folder specified. Do you want to process all collections? [Y/n] ');

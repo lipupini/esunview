@@ -70,7 +70,7 @@ class AudioWaveform {
 			echo 'Saving audio waveform for `' . $audioPath . '`...' . "\n";
 		}
 
-		$command = $systemState->dirRoot . '/bin/ffmpeg-audio-waveform.php '
+		$command = $systemState->dirRoot . '/bin/media/audio/waveform.php '
 			. escapeshellarg($systemState->dirCollection . '/' . $collectionName . '/' . $audioPath)
 			. ' ' . escapeshellarg($waveformPathFull);
 		// `ffmpeg` output is purged from display with `> /dev/null 2>&1`. Remove it to see `ffmpeg` output

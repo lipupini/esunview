@@ -4,8 +4,10 @@
 ini_set('max_execution_time', 0);
 ini_set('memory_limit', '512M');
 
+cli_set_process_title('Video Thumbnail');
+
 if (empty($argv[1]) || empty($argv[2])) {
-	echo 'Expected usage: `./ffmpeg-video-thumbnail.php <inputVideoFilepath> <outputPngFilepath>`' . "\n";
+	echo 'Expected usage: `thumbnail.php <inputVideoFilepath> <outputPngFilepath>`' . "\n";
 	exit(1);
 }
 
@@ -28,7 +30,7 @@ function saveHalfwayFrame($videoFile, $outputPngPath) {
 
 function saveVideoFrame($videoFile, $outputPngPath, $time) {
 	/*
-	`ffmpeg` takes a few extra steps for filename-safe operations, and Lipupini aims to offer as much as the filesystem can give regarding filenames
+	`ffmpeg` takes a few extra steps for filename-safe operations, and Lipupini aims to offer as much as the filesystem can give regarding filenames.
 	So the process becomes:
 	1) Use a SHA1 sum of the file, since `ffmpeg` will definitely input and output that format
 	2) Symlink the input file to the system's temp dir
@@ -36,8 +38,8 @@ function saveVideoFrame($videoFile, $outputPngPath, $time) {
 	5) Delete the symlink from (2) and move the output file to its intended destination
 	*/
 	$fileSha1 = sha1_file($videoFile);
-	$tmpInputFilepath = sys_get_temp_dir() . '/' . $fileSha1 . '_input.' . pathinfo($videoFile, PATHINFO_EXTENSION);
-	$tmpOutputFilepath = sys_get_temp_dir() . '/' . $fileSha1 . '_output.png';
+	$tmpInputFilepath = sys_get_temp_dir() . '/ffmpeg-video-thumbnail-' . $fileSha1 . '_input.' . pathinfo($videoFile, PATHINFO_EXTENSION);
+	$tmpOutputFilepath = sys_get_temp_dir() . '/ffmpeg-video-thumbnail-' . $fileSha1 . '_output.png';
 	symlink($videoFile, $tmpInputFilepath);
 	runShellCommand('ffmpeg -ss ' . escapeshellarg($time) . ' -i ' . escapeshellarg($tmpInputFilepath) . ' -frames:v 1 ' . escapeshellarg($tmpOutputFilepath));
 	unlink($tmpInputFilepath);

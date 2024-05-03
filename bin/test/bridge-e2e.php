@@ -1,12 +1,17 @@
 #!/usr/bin/env php
 <?php
 
+ini_set('max_execution_time', 0);
+ini_set('memory_limit', '512M');
+
+cli_set_process_title('E2E Test Helper');
+
 use Module\Lipupini\State;
 use Module\Lipupini\Collection;
 use Module\Lipupini\Encryption;
 
 /** @var State $systemState */
-$systemState = require(__DIR__ . '/../system/config/state.php');
+$systemState = require(__DIR__ . '/../../system/config/state.php');
 $collectionUtility = new Collection\Utility($systemState);
 
 if (empty($argv[1])) {

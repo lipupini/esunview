@@ -16,11 +16,11 @@ bin command *args="":
 
 # Generate media cache files on deployment server
 process-media:
-	just bin process-media
+	just bin media/process
 
 # Generate RSA keys on deployment server
 generate-keys collection="":
-	just bin generate-keys {{collection}}
+	just bin collection/generate-keys {{collection}}
 
 # Push committed changes to remote `origin` https://github.com/lipupini/esunview.git
 push:
