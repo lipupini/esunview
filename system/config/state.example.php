@@ -58,6 +58,7 @@ return new Module\Esunview\State(
 		Module\Esunview\Request\Html\Collection\MediaItemRequest::class => null,
 		Module\Esunview\Request\Html\Collection\ListRequest::class => null,
 		Module\Esunview\Request\Html\Collection\PurchaseRequest::class => null,
+		Module\Esunview\Request\QrCodeRequest::class => null,
 		Module\Lipupini\Collection\MediaProcessor\Request\AudioRequest::class => null,
 		Module\Lipupini\Collection\MediaProcessor\Request\AudioThumbnailRequest::class => null,
 		Module\Lipupini\Collection\MediaProcessor\Request\AudioWaveformRequest::class => null,

@@ -3,3 +3,10 @@
 	margin-bottom: 2rem;
 	font-size: 1.5rem;
 }
+.qr-image {
+	margin-top: 3rem;
+}
+.qr-image img {
+	max-width: 150px;
+	height: auto;
+}

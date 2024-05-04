@@ -1,5 +1,7 @@
 <?php
 
+use Module\Lipupini\Collection\Utility;
+
 require(__DIR__ . '/Core/Open.php') ?>
 
 <div class="centered-content">
@@ -16,6 +18,11 @@ require(__DIR__ . '/Core/Open.php') ?>
 				<button type="submit"><?php echo htmlentities(ucfirst($this->word)) ?></button>
 			</div>
 		</form>
+
+		<div class="qr-image">
+			<p>QR link to this page:</p>
+			<img src="<?php echo Utility::urlEncodeUrl($this->system->baseUri . 'qr/' . $this->collectionName . '/' . $this->collectionFolder) ?>?type=<?php echo htmlentities($this->word) ?>">
+		</div>
 	</div>
 </div>
 

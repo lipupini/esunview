@@ -16,8 +16,6 @@ class FolderRequest extends Request\Html {
 
 	public string|null $pageImagePreviewUri = null;
 
-	public string $collectionFolder = '';
-
 	use Collection\Trait\CollectionRequest;
 
 	public function initialize(): void {
@@ -29,7 +27,7 @@ class FolderRequest extends Request\Html {
 		$this->collectionNameFromSegment(1, '@');
 
 		$this->collectionFolder = preg_replace(
-			'#^/@' . preg_quote($this->collectionName) . '/?#', '',
+			'#^' . preg_quote($this->system->baseUriPath) . '@' . preg_quote($this->collectionName) . '/?#', '',
 			$_SERVER['REQUEST_URI_DECODED']
 		);
 

@@ -7,6 +7,7 @@ use Module\Lipupini\Collection\Utility;
 
 trait CollectionRequest {
 	public string $collectionName;
+	public string $collectionFolder = '';
 
 	public function collectionNameFromSegment(int $segmentIndex, string $prefix = '', string $baseUri = null) {
 		if (!$baseUri) $baseUri = $this->system->baseUriPath;
