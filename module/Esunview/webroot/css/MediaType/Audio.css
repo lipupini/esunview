@@ -40,6 +40,9 @@
 	transition-property: opacity;
 	transition-duration: .25s;
 }
+#media-item .audio-container .waveform {
+	background-size: 100% 160%;
+}
 .audio-container[style] .waveform {
 	opacity: 0;
 }
