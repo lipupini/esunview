@@ -6,7 +6,7 @@ Contact me with inquiries, tips, or to report the weather in your area.
 
 PayPal: https://paypal.me/dupbz
 
-Stripe: https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4 (CC + Amazon Pay + Cash App + WeChat + Affirm)
+Stripe: https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4 (Credit Card + Amazon Pay + Cash App + Alipay)
 
 BTC: 1NRPbFJggFsG3dFoFVfPTCcibqMtdfGzn3
 
