@@ -2,6 +2,7 @@
 
 use Module\Lipupini\Collection;
 use Module\Lipupini\L18n\A;
+use Module\Lipupini\Collection\Utility;
 
 $collectionUtility = new Collection\Utility($this->system);
 $parentPathLastSegment = explode('/', preg_replace('#\?.*$#', '', $this->parentPath))[substr_count($this->parentPath, '/')];
@@ -93,7 +94,13 @@ case 'video' : ?>
 </div>
 <?php break;
 endswitch;
-?>
+
+if (!is_null($this->purchased)) : ?>
+
+<div class="qr-image">
+	<img src="<?php echo Utility::urlEncodeUrl($this->system->baseUri . 'qr/' . $this->collectionName . '/' . $this->collectionFilePath) ?>">
+</div>
+<?php endif ?>
 
 </main>
 </div>

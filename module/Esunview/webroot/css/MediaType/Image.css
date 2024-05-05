@@ -30,3 +30,10 @@
 	max-height: 85vh;
 	max-width: 100%;
 }
+#media-item .qr-image {
+	margin-top: 3rem;
+}
+#media-item .qr-image img {
+	max-width: 150px;
+	height: auto;
+}
