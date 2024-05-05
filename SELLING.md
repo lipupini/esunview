@@ -9,6 +9,6 @@ How to Use Esunview to Sell Tangible Goods
 
 4) Buyer purchases the photo and receives their tangible goods.
 
-5) Profit
+5) Profit.
 
 6) Delete the photo? See also: https://c.dup.bz/@vvvvvoiddddd/DeleteThatScreenshot.mp4.html
