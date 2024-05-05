@@ -1,10 +1,10 @@
 # Esunview
 
-Esunview is a **non-free** [Lipupini](https://github.com/lipupini/lipupini) module for continued development.
+Esunview is a **donationware** [Lipupini](https://github.com/lipupini/lipupini) module for continued development.
 
-Is any part of this repository useful in any way?
+Is some part of this repository useful?
 
-Contact me with inquiries, tips, or to report the weather in your area.
+Contact me with inquiries, tips, or to report the weather in your area. Let me know if there are any questions when setting it up. It is different from Lipupini in that it requires a bit more setup to get started and use.
 
 PayPal: **https://paypal.me/dupbz**
 

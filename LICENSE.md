@@ -1,6 +1,6 @@
-Esunview source code is non-free.
+Esunview is donationware.
 
-Is any part of this repository useful in any way?
+Is some part of this repository useful?
 
 Contact me with inquiries, tips, or to report the weather in your area.
 
