@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 namespace Module\Esunview\Request\Html\Collection;
 
 use Module\Esunview\Collection\MediaProcessor\Image;

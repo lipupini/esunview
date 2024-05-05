@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 namespace Module\Esunview\Request;
 
 require(__DIR__ . '/../vendor/autoload.php');

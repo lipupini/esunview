@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 use Module\Lipupini\Collection\Utility;
 
 require(__DIR__ . '/Core/Open.php') ?>

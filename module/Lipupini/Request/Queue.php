@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 namespace Module\Lipupini\Request;
 
 use Module\Lipupini\State;

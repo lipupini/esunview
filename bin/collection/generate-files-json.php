@@ -1,6 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 cli_set_process_title('Generate `files.json`');
 
 use Module\Lipupini\Collection;

@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 namespace Module\Lipupini;
 
 const LIPUPINI_VERSION = 5; // Try not to forget to update this during major API releases

@@ -1,3 +1,8 @@
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 document.querySelectorAll('.audio-container').forEach(container => {
 	const isTouchDevice = 'ontouchstart' in document.documentElement
 	const audio = container.querySelector('audio')

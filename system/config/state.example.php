@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -13,8 +18,8 @@ $baseUri = 'http' . ($isHttps ? 's' : '') . '://' . $httpHost . '/';
 
 return new Module\Esunview\State(
 	contactEmail: 'your@email.ocm',
-	//stripeKey: 'sk_test_EXAMPLE',
-	stripeKey: 'sk_live_EXAMPLE',
+	stripeKey: 'sk_test_EXAMPLE',
+	//stripeKey: 'sk_live_EXAMPLE',
 	baseUri: $baseUri, // Include trailing slash
 	staticMediaBaseUri: $baseUri . 'c/', // You can put a CDN URL here. Include trailing slash.
 	frontendModule: 'Esunview',

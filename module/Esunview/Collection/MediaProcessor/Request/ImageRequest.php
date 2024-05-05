@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 namespace Module\Esunview\Collection\MediaProcessor\Request;
 
 ini_set('max_execution_time', 0);

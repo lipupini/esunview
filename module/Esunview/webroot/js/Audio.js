@@ -1,3 +1,8 @@
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 document.querySelectorAll('.audio-container').forEach(container => {
 	const mediaElement = container.querySelector('audio')
 	container.classList.add('loading')

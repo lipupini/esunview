@@ -1,4 +1,10 @@
 <?php
+
+/*
+ * License: Donationware
+ * Homepage: https://c.dup.bz
+*/
+
 use Module\Lipupini\L18n\A;
 A::$path = realpath(__DIR__ . '/../../../Lukinview/');
 ?>
