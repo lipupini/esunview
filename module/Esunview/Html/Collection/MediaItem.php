@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: https://github.com/lipupini/esunview/blob/master/LICENSE.md
+ * Homepage: https://c.dup.bz
+*/
+
 use Module\Lipupini\Collection;
 use Module\Lipupini\L18n\A;
 use Module\Lipupini\Collection\Utility;

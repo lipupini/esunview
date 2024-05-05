@@ -1,7 +1,7 @@
 <?php
 
 /*
- * License: Donationware
+ * License: https://github.com/lipupini/esunview/blob/master/LICENSE.md
  * Homepage: https://c.dup.bz
 */
 

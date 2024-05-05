@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * License: https://github.com/lipupini/esunview/blob/master/LICENSE.md
+ * Homepage: https://c.dup.bz
+*/
+
 use Module\Lipupini\L18n\A;
 
 require(__DIR__ . '/../Core/Open.php');
