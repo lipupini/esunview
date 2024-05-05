@@ -6,7 +6,7 @@
 */
 
 use Module\Lipupini\L18n\A;
-A::$path = realpath(__DIR__ . '/../../../Lukinview/');
+A::$path = realpath(__DIR__ . '/../../../Esunview/');
 ?>
 <!DOCTYPE html>
 <html>
