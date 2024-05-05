@@ -49,7 +49,7 @@ class QrCodeRequest extends Request\Queued {
 		} else {
 			$url .= '@';
 		}
-		$url .= rtrim($this->collectionName . '/' . $collectionPath, '/');
+		$url .= Collection\Utility::urlEncodeUrl(rtrim($this->collectionName . '/' . $collectionPath, '/'));
 		$result = Builder::create()
 			->writer(new PngWriter())
 			->writerOptions([])
