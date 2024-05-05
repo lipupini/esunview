@@ -32,8 +32,12 @@ class QrCodeRequest extends Request\Queued {
 		);
 		$this->collectionFolder = $_SERVER['REQUEST_URI_DECODED'];
 		// Check if path is a collection file or folder
-		if (pathinfo($collectionPath, PATHINFO_EXTENSION)) {
-			$this->collectionFolder = pathinfo($collectionPath, PATHINFO_DIRNAME);
+		$extension = pathinfo($collectionPath, PATHINFO_EXTENSION);
+		$dirName = pathinfo($collectionPath, PATHINFO_DIRNAME);
+		if ($extension) {
+			$this->collectionFolder = $dirName;
+		} else if ($dirName === '.') {
+			$this->collectionFolder = $collectionPath;
 		}
 		(new Collection\Utility($this->system))->validateCollectionFolder($this->collectionName, $this->collectionFolder);
 		$url = $this->system->baseUri;
