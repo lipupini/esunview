@@ -98,7 +98,7 @@ endswitch;
 if (!is_null($this->purchased)) : ?>
 
 <div class="qr-image">
-	<img src="<?php echo Utility::urlEncodeUrl($this->system->baseUri . 'qr/' . $this->collectionName . '/' . $this->collectionFilePath) ?>">
+	<img src="<?php echo Utility::urlEncodeUrl($this->system->baseUri . 'qr/' . $this->collectionName . '/' . $this->collectionFilePath . '.html') ?>">
 </div>
 <?php endif ?>
 
