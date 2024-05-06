@@ -41,8 +41,8 @@ class Utility {
 		$gateway = new Gateway($this->system);
 
 		if (
-			$gateway::gatedFolder($collectionFolder) &&
-			$gateway::gatedCollectionFolderClosed($this->$collectionName, $this->$collectionFolder)
+			$gateway::gatedFolder($this->system->dirCollection . '/' . $collectionName . '/' . $collectionFolder) &&
+			$gateway::gatedCollectionFolderClosed($collectionName, $collectionFolder)
 		) {
 			return [];
 		}
@@ -171,6 +171,7 @@ class Utility {
 				continue;
 			}
 			$collectionFolder = preg_replace('#^' . preg_quote($dirCollectionFolder) . '/#', '', $filePath);
+
 			$collectionData += $this->getCollectionData($collectionName, $collectionFolder);
 		}
 
