@@ -12,3 +12,7 @@ How to Use Esunview to Sell Tangible Goods
 5. Delete the photo? See also: https://c.dup.bz/@vvvvvoiddddd/DeleteThatScreenshot.mp4.html
 
 6. Profit.
+
+---
+
+From: https://github.com/lipupini/esunview/blob/master/SELLING.md
