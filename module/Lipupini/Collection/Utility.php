@@ -7,6 +7,7 @@
 
 namespace Module\Lipupini\Collection;
 
+use Module\Esunview\Payment\Gateway;
 use Module\Lipupini\State;
 
 class Utility {
@@ -35,6 +36,15 @@ class Utility {
 
 		if (pathinfo($collectionFolder, PATHINFO_EXTENSION)) {
 			throw new Exception('`$collectionFolder` should be a directory, not a file');
+		}
+
+		$gateway = new Gateway($this->system);
+
+		if (
+			$gateway::gatedFolder($collectionFolder) &&
+			$gateway::gatedCollectionFolderClosed($this->$collectionName, $this->$collectionFolder)
+		) {
+			return [];
 		}
 
 		$mediaTypesByExtension = $this->mediaTypesByExtension();

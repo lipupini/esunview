@@ -1,0 +1,1 @@
+- Make more system objects/classes, for example a collection folder class. See `getCollectionData()` for an example of where a `collectionFolder` is used. Typically a `collectionFolder` is e.g. `filename.jpg` or `Memes/filename.jpg`, but that is hard to guess. `collectionName` and `collectionFolder` should be very specific concepts in this codebase, as specific as possible.
