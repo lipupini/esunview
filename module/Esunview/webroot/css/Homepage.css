@@ -54,6 +54,9 @@ section {
 	}
 }
 @media screen and (min-width: 1000px) {
+	html {
+		font-size: 17px;
+	}
 	body {
 		padding-bottom: 4rem;
 	}
