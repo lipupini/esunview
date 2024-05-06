@@ -16,6 +16,7 @@
 }
 #folder .grid a.text-container:hover {
 	color: #fff;
+	background-color: rgba(0, 0, 0, .2);
 }
 #folder .grid .text-container > div {
 	padding: 1rem .5rem;

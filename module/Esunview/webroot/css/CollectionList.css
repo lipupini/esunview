@@ -3,12 +3,14 @@
  * Homepage: https://c.dup.bz
 */
 
+body {
+	padding: 2rem 3rem;
+}
 ul {
 	list-style: none;
-	padding: 1.5rem 3rem;
 }
 li {
-	margin-bottom: 0.75rem;
+	margin-bottom: 1.5rem;
 }
 .add-collection {
 	text-transform: lowercase;
