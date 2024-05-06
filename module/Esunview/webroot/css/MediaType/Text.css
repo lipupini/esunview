@@ -16,6 +16,7 @@ html, body {
 }
 #folder .grid a.text-container {
 	text-decoration: underline;
+	word-break: break-word;
 }
 #folder .grid a.text-container:hover {
 	color: #fff;

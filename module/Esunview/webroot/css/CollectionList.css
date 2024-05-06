@@ -3,11 +3,8 @@
  * Homepage: https://c.dup.bz
 */
 
-body {
-	padding: 2rem 3rem;
-}
 ul {
-	padding-left: 0;
+	padding: 2rem 3rem;
 	list-style: none;
 }
 li {
