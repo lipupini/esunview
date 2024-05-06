@@ -33,7 +33,6 @@ code {
 }
 ol {
 	padding: 0 0 0 2.25rem;
-	margin-top: 2rem;
 }
 section {
 	border: 2px solid rgba(191, 191, 191, .25);
@@ -49,6 +48,9 @@ section {
 		margin: 0 auto 2rem auto;
 		padding: 1rem 2rem;
 		max-width: 1000px;
+	}
+	ol {
+		margin-top: 2rem;
 	}
 }
 @media screen and (min-width: 1000px) {
