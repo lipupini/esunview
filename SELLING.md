@@ -1,4 +1,4 @@
-How to Use Esunview to Sell Tangible Goods
+Using Esunview to Sell Tangible Goods
 ==========================================
 
 From: https://github.com/lipupini/esunview/blob/master/SELLING.md
