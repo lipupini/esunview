@@ -17,11 +17,16 @@ html, body {
 body, a {
 	color: #bfbfbf;
 }
+a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
 body > main {
 	padding-block: 0;
 }
 a {
 	text-decoration: none;
+	background-color: rgba(0, 0, 0, .2);
 }
 a.button {
 	display: inline-flex;
@@ -33,9 +38,20 @@ a.button {
 	border: none;
 	cursor: pointer;
 	opacity: .75;
+	background-color: transparent;
 }
 a.button:not([disabled]):hover {
 	opacity: 1;
+}
+a.button.border {
+	border: 1px solid #bfbfbf;
+	border-radius: 1rem;
+	background-color: rgba(0, 0, 0, .2);
+	padding: 1rem 2rem;
+}
+a.button.border:hover {
+	border-color: #fff;
+	text-decoration: none;
 }
 footer {
 	text-align: center;

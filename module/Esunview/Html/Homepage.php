@@ -7,11 +7,15 @@
 
 require(__DIR__ . '/Core/Open.php') ?>
 
-<div class="centered-content">
-	<div>
-		<p><strong><a href="<?php echo $this->system->baseUri ?>@">View Collections</a></strong></p>
-	</div>
+<div class="view-collections">
+	<p><strong><a href="<?php echo $this->system->baseUri ?>@" class="button border">View Collections</a></strong></p>
 </div>
+
+<?php echo $this->sections['readme'] ?>
+
+
+<?php echo $this->sections['selling'] ?>
+
 
 <?php
 
