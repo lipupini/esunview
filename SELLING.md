@@ -1,9 +1,9 @@
+How to Use Esunview to Sell Tangible Goods
+==========================================
+
 From: https://github.com/lipupini/esunview/blob/master/SELLING.md
 
 ---
-
-How to Use Esunview to Sell Tangible Goods
-==========================================
 
 1. Install Esunview, or have someone install it for you, and add a collection of photos with sales enabled.
 
