@@ -20,14 +20,16 @@ h1:after {
 	text-align: center;
 	margin: 5rem 0;
 }
-pre:has(code) > code {
-	display: block;
-	margin: 1rem 0;
+pre:has(> code) {
 	padding: 1rem;
+	background-color: rgba(0, 0, 0, .2);
+}
+pre:has(> code) > code {
+	display: block;
+	margin: 0;
 	overflow-y: auto;
 }
 code {
-	background-color: rgba(0, 0, 0, .2);
 	font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
 }
 ol {
