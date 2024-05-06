@@ -13,7 +13,7 @@ require(__DIR__ . '/Core/Open.php') ?>
 
 <?php foreach ($this->sections as $section => $content): ?>
 
-<section class="<?php echo htmlentities($section) ?>"><?php echo $content ?></section>
+<section id="<?php echo htmlentities($section) ?>"><?php echo $content ?></section>
 <?php endforeach;
 
 require(__DIR__ . '/Core/Close.php');
