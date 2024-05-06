@@ -12,9 +12,10 @@ PayPal: **https://paypal.me/dupbz**
 
 Stripe: **https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4** (Credit Card + Amazon Pay + Cash App + Alipay)
 
-BTC: **1NRPbFJggFsG3dFoFVfPTCcibqMtdfGzn3**
-
-ETH: **0xde0cf195ed34197ee287f5ca611e8c5f0cdb1d26**
+```
+BTC: 1NRPbFJggFsG3dFoFVfPTCcibqMtdfGzn3
+ETH: 0xde0cf195ed34197ee287f5ca611e8c5f0cdb1d26
+```
 
 ```
 Telegram:  https://t.me/dupbz (E2E Available)

@@ -104,17 +104,3 @@ footer nav .parent {
 	align-items: center;
 	justify-content: center;
 }
-ol, ul {
-	margin-top: 1rem;
-	padding: 0;
-}
-ol p {
-	display: inline-block;
-	margin-top: 0;
-}
-ol li {
-	list-style-position: inside
-}
-ol li::marker {
-	display: inline;
-}
