@@ -3,6 +3,9 @@
  * Homepage: https://c.dup.bz
 */
 
+html, body {
+	height: 100%;
+}
 #folder .grid .text-container {
 	aspect-ratio: 1;
 	text-align: center;
@@ -28,11 +31,13 @@
 }
 #media-item main {
 	flex: 1;
+	padding-bottom: 0;
 }
 #media-item .text-container,
 #media-item .text-container object {
 	width: 100%;
 	height: 100%;
+	display: flex;
 }
 #media-item .text-container object {
 	background-color: #ccc;
@@ -40,4 +45,7 @@
 #media-item footer {
 	margin-top: 0;
 	padding-bottom: 0;
+}
+.qr-image {
+	display: none;
 }

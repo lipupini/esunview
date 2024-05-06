@@ -20,7 +20,6 @@ require(__DIR__ . '/../Core/Open.php') ?>
 		<div class="pagination parent"><a href="/<?php echo htmlentities($this->parentPath) ?>" class="button" title="<?php echo $this->parentPath ? htmlentities($parentPathLastSegment) : A::z('Homepage') ?>"><img src="/img/arrow-up-bold.svg" alt="<?php echo $this->parentPath ? htmlentities($parentPathLastSegment) : A::z('Homepage') ?>"></a></div>
 	</nav>
 </header>
-<main>
 <?php if (!is_null($this->purchased)) : ?>
 <?php if ($this->purchased) : ?>
 
@@ -43,6 +42,7 @@ require(__DIR__ . '/../Core/Open.php') ?>
 </form>
 <?php endif ?>
 <?php endif ?>
+<main>
 <?php
 switch ($this->fileData['mediaType']) :
 case 'audio' : ?>

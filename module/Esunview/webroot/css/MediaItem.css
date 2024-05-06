@@ -43,6 +43,14 @@
 	0% { opacity: 0; }
 	100% { opacity: 1; }
 }
+#media-item .qr-image {
+	text-align: center;
+	margin-top: 3rem;
+}
+#media-item .qr-image img {
+	max-width: 150px;
+	height: auto;
+}
 footer {
 	margin-top: 3rem;
 }

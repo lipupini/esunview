@@ -8,15 +8,12 @@
 require(__DIR__ . '/Core/Open.php') ?>
 
 <div class="view-collections">
-	<p><strong><a href="<?php echo $this->system->baseUri ?>@" class="button border">View Collections</a></strong></p>
+	<p><strong><a href="<?php echo $this->system->baseUri ?>@">View Collections</a></strong></p>
 </div>
 
-<?php echo $this->sections['readme'] ?>
+<?php foreach ($this->sections as $section => $content): ?>
 
-
-<?php echo $this->sections['selling'] ?>
-
-
-<?php
+<section class="<?php echo htmlentities($section) ?>"><?php echo $content ?></section>
+<?php endforeach;
 
 require(__DIR__ . '/Core/Close.php');
