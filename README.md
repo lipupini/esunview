@@ -31,4 +31,4 @@ Use all three if you can.
 
 The only installation that I am working on right now is at https://c.dup.bz
 
-`c.dup.bz` uses the exact same source code that is in this repository.
+`c.dup.bz` uses the exact same source code that is in this repository: https://github.com/lipupini/esunview
