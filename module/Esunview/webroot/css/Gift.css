@@ -2,7 +2,9 @@
  * License: https://github.com/lipupini/esunview/blob/master/LICENSE.md
  * Homepage: https://c.dup.bz
 */
-
+html, body {
+	height: 100%;
+}
 .purchase button {
 	padding: 1rem 2rem;
 	margin-bottom: 2rem;

@@ -3,6 +3,9 @@
  * Homepage: https://c.dup.bz
 */
 
+html, body:has(.add-collection) {
+	height: 100%;
+}
 ul {
 	padding: 2rem 3rem;
 	list-style: none;
