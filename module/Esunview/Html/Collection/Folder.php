@@ -21,6 +21,20 @@ require(__DIR__ . '/../Core/Open.php') ?>
 		<div class="pagination next"><a href="<?php echo $this->nextUrl ? htmlentities($this->nextUrl) : 'javascript:void(0)' ?>" class="button" title="<?php echo A::z('Next') ?>"<?php if (!$this->nextUrl) : ?> disabled<?php endif ?>><img src="/img/arrow-right-bold.svg" alt="<?php echo A::z('Next') ?>"></a></div>
 	</nav>
 </header>
+<?php if (!empty($this->collectionProfile['summary'])) : ?>
+
+<div class="summary">
+	<h4><?php echo htmlentities($this->collectionProfile['summary']) ?></h4>
+</div>
+<?php endif ?>
+
+<?php if (!empty($this->folderInfo['description'])) : ?>
+
+<div class="description">
+	<p><?php echo htmlentities($this->folderInfo['description']) ?></p>
+</div>
+<?php endif ?>
+
 <main class="grid">
 <?php
 foreach ($this->collectionData as $filename => $item) :

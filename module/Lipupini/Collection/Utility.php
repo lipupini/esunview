@@ -11,6 +11,7 @@ use Module\Esunview\Payment\Gateway;
 use Module\Lipupini\State;
 
 class Utility {
+	private static array $data = [];
 	public function __construct(private State $system) { }
 
 	public function allCollectionFolders(): array {
@@ -24,6 +25,20 @@ class Utility {
 			$collectionFolders[] = $fileInfo->getFilename();
 		}
 		return $collectionFolders;
+	}
+
+	public function filesJsonData(string $collectionName): array {
+		if (isset(static::$data[$collectionName])) {
+			return static::$data[$collectionName];
+		}
+		$collectionRootPath = $this->system->dirCollection . '/' . $collectionName;
+		$filesJsonPath = $collectionRootPath . '/.lipupini/files.json';
+		if (!file_exists($filesJsonPath)) return [];
+		return static::$data[$collectionName] = json_decode(file_get_contents($filesJsonPath), true);
+	}
+
+	public function itemInfo(string $collectionName, string $filePath): array {
+		return $this->filesJsonData($collectionName)[$filePath] ?? [];
 	}
 
 	public function getCollectionData(string $collectionName, string $collectionFolder, bool $includeHidden = false) {
@@ -50,14 +65,12 @@ class Utility {
 		$mediaTypesByExtension = $this->mediaTypesByExtension();
 
 		$return = [];
-		$filesJsonPath = $collectionRootPath . '/.lipupini/files.json';
 		$skipFiles = [];
+		$filesJsonData = $this->filesJsonData($collectionName);
 		// Process the media file data specified in `files.json` if exists
-		if (file_exists($filesJsonPath)) {
-			// Grab the media file data from `files.json` into an array
-			$collectionFilesJsonData = json_decode(file_get_contents($filesJsonPath), true);
+		if (!empty($filesJsonData)) {
 			// Process collection data first, since it can determine the display order
-			foreach ($collectionFilesJsonData as $filePath => $fileData) {
+			foreach ($filesJsonData as $filePath => $fileData) {
 				// If we are getting data from a collection subfolder, filter out other directories
 				if ($collectionFolder) {
 					if (!str_starts_with($filePath, $collectionFolder) || $filePath === $collectionFolder) {
@@ -185,6 +198,12 @@ class Utility {
 		}
 
 		return $collectionData;
+	}
+
+	public function getCollectionProfile(string $collectionName): array {
+		$profileFile = $this->system->dirCollection . '/' . $collectionName . '/.lipupini/profile.json';
+		if (!file_exists($profileFile)) return [];
+		return json_decode(file_get_contents($profileFile), true);
 	}
 
 	// https://beamtic.com/if-command-exists-php

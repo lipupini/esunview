@@ -13,14 +13,13 @@ use Module\Lipupini\Request;
 
 class FolderRequest extends Request\Html {
 	public array $collectionData = [];
-
+	public array $collectionProfile = [];
+	public array $folderInfo = [];
 	protected string|null $nextUrl = null;
 	protected string|null $prevUrl = null;
-
-	use Collection\Trait\HasPaginatedCollectionData;
-
 	public string|null $pageImagePreviewUri = null;
 
+	use Collection\Trait\HasPaginatedCollectionData;
 	use Collection\Trait\CollectionRequest;
 
 	public function initialize(): void {
@@ -55,7 +54,10 @@ class FolderRequest extends Request\Html {
 	}
 
 	private function loadViewData(): void {
-		$this->collectionData = (new Collection\Utility($this->system))->getCollectionData($this->collectionName, $this->collectionFolder);
+		$collectionUtility = new Collection\Utility($this->system);
+		$this->collectionData = $collectionUtility->getCollectionData($this->collectionName, $this->collectionFolder);
+		$this->collectionProfile = $collectionUtility->getCollectionProfile($this->collectionName);
+		$this->folderInfo = $collectionUtility->itemInfo($this->collectionName, $this->collectionFolder);
 
 		$this->loadPaginationAttributes();
 
