@@ -20,6 +20,7 @@
 	font-weight: bold;
 	transition-property: font-size;
 	transition-duration: .15s;
+	text-align: center;
 }
 #folder .grid .folder-container:hover {
 	background: radial-gradient(circle, #484848 0%, #2d2d2d 100%);
