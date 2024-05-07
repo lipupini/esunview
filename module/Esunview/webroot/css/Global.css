@@ -42,7 +42,7 @@ a.button {
 	background-color: transparent;
 	text-decoration: none;
 }
-a.button:not([disabled]):hover {
+a.button:not(.disabled):hover {
 	opacity: 1;
 }
 footer {
@@ -76,7 +76,7 @@ nav .pagination a.button img {
 	width: 1.8rem;
 	height: 1.8rem;
 }
-nav a.button[disabled] {
+nav a.button.disabled {
 	opacity: 0.125;
 	cursor: unset;
 }

@@ -17,7 +17,7 @@ require(__DIR__ . '/../Core/Open.php') ?>
 <header>
 	<nav>
 
-		<div class="pagination previous"><a href="<?php echo $this->prevUrl ? htmlentities($this->prevUrl) : 'javascript:void(0)' ?>" class="button" title="<?php echo A::z('Previous') ?>"<?php if (! $this->prevUrl) : ?> disabled<?php endif ?>><img src="/img/arrow-left-bold.svg" alt="<?php echo A::z('Previous') ?>"></a></div>
+		<div class="pagination previous"><a href="<?php echo $this->prevUrl ? htmlentities($this->prevUrl) : 'javascript:void(0)' ?>" class="button<?php if (! $this->prevUrl) : ?> disabled<?php endif ?>" title="<?php echo A::z('Previous') ?>"><img src="/img/arrow-left-bold.svg" alt="<?php echo A::z('Previous') ?>"></a></div>
 		<div class="pagination parent">
 			<?php if ($this->parentPath !== '@' || empty($this->collectionProfile['disableIndexLink'])) : ?>
 
@@ -26,7 +26,7 @@ require(__DIR__ . '/../Core/Open.php') ?>
 
 		</div>
 
-		<div class="pagination next"><a href="<?php echo $this->nextUrl ? htmlentities($this->nextUrl) : 'javascript:void(0)' ?>" class="button" title="<?php echo A::z('Next') ?>"<?php if (!$this->nextUrl) : ?> disabled<?php endif ?>><img src="/img/arrow-right-bold.svg" alt="<?php echo A::z('Next') ?>"></a></div>
+		<div class="pagination next"><a href="<?php echo $this->nextUrl ? htmlentities($this->nextUrl) : 'javascript:void(0)' ?>" class="button<?php if (!$this->nextUrl) : ?> disabled<?php endif ?>" title="<?php echo A::z('Next') ?>"><img src="/img/arrow-right-bold.svg" alt="<?php echo A::z('Next') ?>"></a></div>
 
 	</nav>
 </header>
@@ -107,9 +107,9 @@ endforeach ?>
 </main>
 <footer>
 	<nav>
-		<div class="pagination previous"><a href="<?php echo $this->prevUrl ? htmlentities($this->prevUrl) : 'javascript:void(0)' ?>" class="button" title="<?php echo A::z('Previous') ?>"<?php if (!$this->prevUrl) : ?> disabled<?php endif ?>><img src="/img/arrow-left-bold.svg" alt="<?php echo A::z('Previous') ?>"></a></div>
+		<div class="pagination previous"><a href="<?php echo $this->prevUrl ? htmlentities($this->prevUrl) : 'javascript:void(0)' ?>" class="button<?php if (!$this->prevUrl) : ?> disabled<?php endif ?>" title="<?php echo A::z('Previous') ?>"><img src="/img/arrow-left-bold.svg" alt="<?php echo A::z('Previous') ?>"></a></div>
 		<div class="pagination parent"></div>
-		<div class="pagination next"><a href="<?php echo $this->nextUrl ? htmlentities($this->nextUrl) : 'javascript:void(0)' ?>" class="button" title="<?php echo A::z('Next') ?>"<?php if (!$this->nextUrl) : ?> disabled<?php endif ?>><img src="/img/arrow-right-bold.svg" alt="<?php echo A::z('Next') ?>"></a></div>
+		<div class="pagination next"><a href="<?php echo $this->nextUrl ? htmlentities($this->nextUrl) : 'javascript:void(0)' ?>" class="button<?php if (!$this->nextUrl) : ?> disabled<?php endif ?>" title="<?php echo A::z('Next') ?>"><img src="/img/arrow-right-bold.svg" alt="<?php echo A::z('Next') ?>"></a></div>
 	</nav>
 	<div class="about">
 		<a href="https://github.com/lipupini/esunview" target="_blank" rel="noopener noreferrer" class="button" title="<?php echo A::z('More information about this software') ?>">?</a>
