@@ -21,6 +21,7 @@ class GiftRequest extends Request\Html {
 		'present',
 		'offering',
 		'purchase',
+		'spend',
 		'favor',
 		'gift',
 		'payment',
