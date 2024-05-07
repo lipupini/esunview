@@ -94,11 +94,6 @@ class FolderRequest extends Request\Html {
 		$avatarUrlPath = Collection\MediaProcessor\Avatar::avatarUrlPath($this->system, $this->collectionName);
 		$this->pageImagePreviewUri = $avatarUrlPath ?? null;
 
-		$this->addScript('/lib/videojs/video.min.js');
-		$this->addStyle('/lib/videojs/video-js.min.css');
-		$this->addScript('/js/Audio.js');
-		$this->addScript('/js/AudioWaveformSeek.js');
-
 		$this->addStyle('/css/Global.css');
 		$this->addStyle('/css/Folder.css');
 
@@ -106,7 +101,15 @@ class FolderRequest extends Request\Html {
 			$this->addStyle('/css/MediaType/' . ucfirst($mediaType) . '.css');
 		}
 
+		$this->addStyle('/lib/videojs/video-js.min.css');
+		$this->addScript('/lib/videojs/video.min.js');
+		$this->addScript('/js/Audio.js');
+		$this->addScript('/js/AudioWaveformSeek.js');
+
 		$this->preloadReady();
+
+		// Firefox FOUC fix
+		$this->htmlHead .= '<script>/* FF FOUC Fix */</script>' . "\n";
 
 		$this->htmlHead .= '<link rel="alternate" type="application/rss+xml" title="'
 				. htmlentities($this->collectionName .  '@' . $this->system->host) . '" href="'
