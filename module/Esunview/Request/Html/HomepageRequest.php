@@ -19,7 +19,6 @@ class HomepageRequest extends Request\Html {
 
 		$this->sections = [
 			'readme' => Parsedown::instance()->text(file_get_contents($this->system->dirRoot . '/README.md')),
-			'selling' => Parsedown::instance()->text(file_get_contents($this->system->dirRoot . '/SELLING.md')),
 		];
 
 		$this->pageTitle = 'Homepage@' . $this->system->host;
