@@ -128,6 +128,9 @@ class MediaItemRequest extends Request\Html {
 
 		$this->preloadReady();
 
+		// Firefox FOUC fix
+		$this->htmlHead .= '<script>/* FF FOUC Fix */</script>' . "\n";
+
 		// This should be rethought if needed
 		if (
 			file_exists($this->system->dirCollection . '/' . $this->collectionName . '/.lipupini/watermark.png') ||
