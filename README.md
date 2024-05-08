@@ -22,11 +22,12 @@ ETH: 0xde0cf195ed34197ee287f5ca611e8c5f0cdb1d26
 ```
 
 ```
+Signal:    https://signal.me/#eu/REcFIa1gNg1zZXTlbSRPGFxhk3taYHNGW27FNAg-hsKQgk4ZDcBBTZgy41NDWDvq (E2E)
 Telegram:  https://t.me/dupbz (E2E Available)
 Voicemail: 804-326-4562
 Email:     app@dup.bz
 
-Use all three if you can.
+Use more than one if you can, to minimize what can get in the way.
 ```
 
 The only installation that I am working on right now is at https://c.dup.bz
