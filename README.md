@@ -12,11 +12,9 @@ The following features are added:
 - Ability to gate an entire folder, where access is granted after a payment.
 - The homepage content comes directly from this `README.md`
 
-Additionally, most general improvements go to Esunview.
+Nearly all general improvements go to Esunview.
 
-Is some part of this repository useful?
-
-Contact me with inquiries, tips, or to report the weather in your area. Let me know if there are any questions when setting it up. It is different from Lipupini in that it requires a bit more setup to get started and use.
+Is some part of this repository useful? Contact me with inquiries, tips, or to report the weather in your area. Let me know if there are any questions when setting it up. It is different from Lipupini in that it requires a bit more setup to get started and use.
 
 If you are unable to donate, still reach out.
 
