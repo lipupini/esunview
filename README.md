@@ -12,7 +12,7 @@ The following features are added:
 - Ability to gate an entire folder, where access is granted after a payment.
 - The homepage content comes directly from this `README.md`
 
-Nearly all general improvements go to Esunview.
+Nearly all general improvements go to Esunview instead of Lipupini.
 
 Is some part of this repository useful? Contact me with inquiries, tips, or to report the weather in your area. Let me know if there are any questions when setting it up. It is different from Lipupini in that it requires a bit more setup to get started and use.
 
@@ -34,7 +34,7 @@ Telegram:  https://t.me/dupbz (E2E Available)
 Voicemail: 804-326-4562
 Email:     app@dup.bz
 
-Use more than one if you can, to minimize what can get in the way.
+Use more than one if you can.
 ```
 
 The only installation that I am working on right now is at https://c.dup.bz
