@@ -19,6 +19,7 @@ Stripe: **https://buy.stripe.com/5kA7tY4KJ0hvcpO4h4** (Credit Card + Amazon Pay 
 ```
 BTC: 1NRPbFJggFsG3dFoFVfPTCcibqMtdfGzn3
 ETH: 0xde0cf195ed34197ee287f5ca611e8c5f0cdb1d26
+XMR: 84D326RLgoV3mxMjGPkRMDaCyzJ99itxo2JUSx5DmX7yEc5L39mvci4PGzQy5GMXMmR4v55e2bmdSJbBWvybMaLq7LmsP7M
 ```
 
 ```
