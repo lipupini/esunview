@@ -8,7 +8,7 @@
 require(__DIR__ . '/../Core/Open.php') ?>
 
 <div class="centered-content">
-<video class="video-js" id="livestream"></video>
+<video class="video-js" id="livestream" controls></video>
 </div>
 
 <?php require(__DIR__ . '/../Core/Close.php') ?>

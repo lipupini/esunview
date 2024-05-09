@@ -25,11 +25,12 @@ class LiveRequest extends Request\Html {
 		$this->addStyle('/lib/videojs/video-js.min.css');
 		$this->addScript('/lib/videojs/video.min.js');
 		$this->addScript('/lib/videojs/videojs-http-streaming.min.js');
-
 		$this->htmlFoot .= <<<HEREDOC
 <script>
 (function() {
-const player = videojs('livestream')
+const player = videojs('livestream', {
+	liveui: true
+})
 const vidURL = 'https://e85b-2605-59c0-146-e910-851f-9d7-1bdb-b8.ngrok-free.app/hls/stream.m3u8'
 player.src({ type: 'application/x-mpegurl', src: vidURL })
 player.ready(function(){
