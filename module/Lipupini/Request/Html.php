@@ -20,7 +20,7 @@ abstract class Html extends Queued {
 			header('Link: <' . $encodedSrc . '?v=' . FRONTEND_CACHE_VERSION . '>; rel=preload; as=script', false);
 		}
 		$this->htmlHead .= '<link href="' . $encodedSrc . '?v=' . FRONTEND_CACHE_VERSION . '" rel="preload" as="script">' . "\n";
-		$this->htmlFoot .= '<script src="' . $encodedSrc . '?v=' . FRONTEND_CACHE_VERSION . '" defer></script>' . "\n";
+		$this->htmlFoot .= '<script src="' . $encodedSrc . '?v=' . FRONTEND_CACHE_VERSION . '"></script>' . "\n";
 	}
 
 	public function addStyle(string $src) {
