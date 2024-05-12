@@ -38,6 +38,4 @@ Email:     app@dup.bz
 Use more than one if you can.
 ```
 
-The only installation that I am working on right now is at https://c.dup.bz
-
-`c.dup.bz` uses the exact same source code that is in this repository: https://github.com/lipupini/esunview
+https://c.dup.bz is now using a new codebase, Musiview, and there is no demo of Esunview and it comes as-is ... Musiview is still similar enough to Esunview to where I can support Esunview if there are questions
